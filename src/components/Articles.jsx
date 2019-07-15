@@ -1,5 +1,6 @@
 import React from "react";
 import * as api from "../api";
+import { Link } from "@reach/router";
 
 class Articles extends React.Component {
   state = {
@@ -19,7 +20,7 @@ class Articles extends React.Component {
             return (
               <li key={article.title} className="articleCard">
                 <h3>{article.title}</h3>
-                <p>{article.topic}</p>
+                <Link to={`topics/${article.topic}`}>{article.topic}</Link>
                 <p>{article.author}</p>
               </li>
             );
@@ -33,7 +34,6 @@ class Articles extends React.Component {
     api
       .getArticles()
       .then(articles => {
-        console.log(articles);
         this.setState({ articles, loading: false });
       })
       .catch(err => {
