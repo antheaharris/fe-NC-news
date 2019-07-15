@@ -20,7 +20,9 @@ class Articles extends React.Component {
             return (
               <li key={article.title} className="articleCard">
                 <h3>{article.title}</h3>
-                <Link to={`topics/${article.topic}`}>{article.topic}</Link>
+                <Link to={`/articles/topics/${article.topic}`}>
+                  {article.topic}
+                </Link>
                 <p>{article.author}</p>
               </li>
             );
@@ -39,6 +41,14 @@ class Articles extends React.Component {
       .catch(err => {
         this.setState({ err });
       });
+  };
+
+  componentDidUpdate = (prevProps, prevState) => {
+    if (prevProps.topic !== this.props.topic) {
+      api.getArticles(this.props.topic).then(articles => {
+        this.setState({ articles, loading: false });
+      });
+    }
   };
 }
 
