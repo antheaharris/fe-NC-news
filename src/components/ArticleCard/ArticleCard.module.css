@@ -1,0 +1,8 @@
+.articleCard {
+  margin-bottom: 1em;
+  border: 3px solid coral;
+  border-radius: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  list-style-type: none;
+}
