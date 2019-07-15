@@ -1,6 +1,5 @@
 import React from "react";
 import * as api from "../../api";
-// import { Link } from "@reach/router";
 import ArticleCard from "../ArticleCard/ArticleCard";
 import styles from "./Articles.module.css";
 
