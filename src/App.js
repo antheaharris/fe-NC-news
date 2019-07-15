@@ -15,6 +15,7 @@ class App extends React.Component {
         <Header />
         <Router>
           <Articles path="/articles" />
+          <Articles path="/articles/topics/:topic" />
         </Router>
       </div>
     );
