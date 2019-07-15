@@ -5,6 +5,10 @@ import Header from "./components/Header";
 import Articles from "./components/Articles";
 
 class App extends React.Component {
+  state = {
+    loggedInUser: "jessjelly"
+  };
+
   render() {
     return (
       <div className="App">
