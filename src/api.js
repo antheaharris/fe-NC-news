@@ -5,9 +5,14 @@ const request = axios.create({
 });
 
 export const getArticles = async topic => {
-  const { data } = await request.get(`/articles`, {
+  const { data } = await request.get("/articles", {
     params: { topic }
   });
 
   return data.articles;
+};
+
+export const getArticleById = async article_id => {
+  const { data } = await request.get(`articles/${article_id}`);
+  return data.article;
 };
