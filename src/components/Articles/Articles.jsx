@@ -18,7 +18,7 @@ class Articles extends React.Component {
       <div>
         <ul className={styles.articlesList}>
           {articles.map(article => {
-            return <ArticleCard article={article} />;
+            return <ArticleCard article={...article} key={article.article_id} />;
           })}
         </ul>
       </div>
