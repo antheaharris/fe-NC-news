@@ -1,0 +1,8 @@
+.commentCard {
+  margin-bottom: 1em;
+  border: 3px solid purple;
+  border-radius: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  list-style-type: none;
+}
