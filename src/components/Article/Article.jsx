@@ -1,5 +1,7 @@
 import React from "react";
 import * as api from "../../api";
+import ArticleComments from "../ArticleComments/ArticleComments";
+import styles from "./Article.module.css";
 
 class Article extends React.Component {
   state = {
@@ -14,9 +16,10 @@ class Article extends React.Component {
       return <p>great articles take time...</p>;
     }
     return (
-      <div>
+      <div className={styles.article}>
         <h2>{title}</h2>
         <p>{body}</p>
+        <ArticleComments article_id={this.props.article_id} />
       </div>
     );
   }
