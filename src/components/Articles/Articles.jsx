@@ -2,15 +2,19 @@ import React from "react";
 import * as api from "../../api";
 import ArticleCard from "../ArticleCard/ArticleCard";
 import styles from "./Articles.module.css";
+import ErrorPage from "../ErrorPage";
 
 class Articles extends React.Component {
   state = {
     articles: [],
-    loading: true
+    loading: true,
+    err: null
   };
 
   render() {
-    const { articles, loading } = this.state;
+    const { articles, loading, err } = this.state;
+    // if (err) return <h1>{err.message}</h1>;
+    if (err) return <ErrorPage err={err} />;
     if (loading) {
       return <p>great articles take time...</p>;
     }
@@ -18,7 +22,7 @@ class Articles extends React.Component {
       <div>
         <ul className={styles.articlesList}>
           {articles.map(article => {
-            return <ArticleCard article={...article} key={article.article_id} />;
+            return <ArticleCard {...article} key={article.article_id} />;
           })}
         </ul>
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import CommentCard from "../CommentCard/CommentCard";
 import styles from "./ArticleComments.module.css";
 import * as api from "../../api";
+import CommentAdder from "../CommentAdder";
 
 class ArticleComments extends React.Component {
   state = {
@@ -13,6 +14,11 @@ class ArticleComments extends React.Component {
     return (
       <div className={styles.commentsList}>
         <h3>What is news without comments...</h3>
+        <CommentAdder
+          article_id={this.props.article_id}
+          addComment={this.addComment}
+          username={this.props.username}
+        />
         <ul>
           {comments.map(comment => {
             return <CommentCard comment={comment} key={comment.comment_id} />;
@@ -31,6 +37,12 @@ class ArticleComments extends React.Component {
       .catch(err => {
         this.setState({ err });
       });
+  };
+
+  addComment = commentToAdd => {
+    this.setState(({ comments }) => {
+      return { comments: [commentToAdd, ...comments] };
+    });
   };
 }
 

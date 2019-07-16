@@ -19,7 +19,10 @@ class Article extends React.Component {
       <div className={styles.article}>
         <h2>{title}</h2>
         <p>{body}</p>
-        <ArticleComments article_id={this.props.article_id} />
+        <ArticleComments
+          article_id={this.props.article_id}
+          username={this.props.username}
+        />
       </div>
     );
   }

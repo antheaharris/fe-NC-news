@@ -11,13 +11,14 @@ class App extends React.Component {
   };
 
   render() {
+    const { loggedInUser } = this.state;
     return (
       <div className="App">
         <Header />
         <Router>
           <Articles path="/articles" />
           <Articles path="/articles/topics/:topic" />
-          <Article path="/articles/:article_id" />
+          <Article path="/articles/:article_id" username={loggedInUser} />
         </Router>
       </div>
     );
