@@ -21,7 +21,13 @@ class ArticleComments extends React.Component {
         />
         <ul>
           {comments.map(comment => {
-            return <CommentCard comment={comment} key={comment.comment_id} />;
+            return (
+              <CommentCard
+                comment={comment}
+                key={comment.comment_id}
+                removeComment={this.removeComment}
+              />
+            );
           })}
         </ul>
       </div>
@@ -42,6 +48,14 @@ class ArticleComments extends React.Component {
   addComment = commentToAdd => {
     this.setState(({ comments }) => {
       return { comments: [commentToAdd, ...comments] };
+    });
+  };
+
+  removeComment = comment_id => {
+    this.setState(({ comments }) => {
+      return {
+        comments: comments.filter(comment => comment.comment_id !== comment_id)
+      };
     });
   };
 }
