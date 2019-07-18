@@ -4,9 +4,9 @@ const request = axios.create({
   baseURL: "https://nc-newsbeat.herokuapp.com/api"
 });
 
-export const getArticles = async topic => {
+export const getArticles = async (topic, sort_by) => {
   const { data } = await request.get("/articles", {
-    params: { topic }
+    params: { topic, sort_by }
   });
   return data.articles;
 };
