@@ -1,5 +1,6 @@
 import React from "react";
 import * as api from "../../api";
+import ErrorPage from "../ErrorPage";
 
 class Voter extends React.Component {
   state = {
@@ -8,18 +9,21 @@ class Voter extends React.Component {
   };
 
   render() {
+    const { voteModifier, err } = this.state;
+    const { votes, type } = this.props;
+    if (err) return <ErrorPage err={err} />;
     return (
       <div>
         <button
-          onClick={() => this.voteOnComment(this.props.type, 1)}
-          disabled={this.state.voteModifier === 1 ? true : false}
+          onClick={() => this.voteOnComment(type, 1)}
+          disabled={voteModifier === 1 ? true : false}
         >
           + 1
         </button>
-        <p>votes: {this.props.votes + this.state.voteModifier}</p>
+        <p>votes: {votes + voteModifier}</p>
         <button
-          onClick={() => this.voteOnComment(this.props.type, -1)}
-          disabled={this.state.voteModifier === 0 ? true : false}
+          onClick={() => this.voteOnComment(type, -1)}
+          disabled={voteModifier === 0 ? true : false}
         >
           -1
         </button>

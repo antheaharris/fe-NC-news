@@ -32,8 +32,10 @@ class Articles extends React.Component {
   }
 
   componentDidMount = () => {
+    const { topic } = this.props;
+
     api
-      .getArticles(this.props.topic)
+      .getArticles(topic)
       .then(articles => {
         this.setState({ articles, loading: false });
       })
@@ -43,11 +45,11 @@ class Articles extends React.Component {
   };
 
   componentDidUpdate = (prevProps, prevState) => {
-    if (
-      prevProps.topic !== this.props.topic ||
-      prevState.sortBy !== this.state.sortBy
-    ) {
-      api.getArticles(this.props.topic, this.state.sortBy).then(articles => {
+    const { sortBy } = this.state;
+    const { topic } = this.props;
+
+    if (prevProps.topic !== topic || prevState.sortBy !== sortBy) {
+      api.getArticles(topic, sortBy).then(articles => {
         this.setState({ articles, loading: false });
       });
     }
