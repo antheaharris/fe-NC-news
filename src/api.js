@@ -32,3 +32,8 @@ export const postComment = async (article_id, newComment) => {
 export const deleteCommentById = comment_id => {
   return request.delete(`/comments/${comment_id}`);
 };
+
+export const vote = async (id, inc) => {
+  const { data } = await request.patch(`/comments/${id}`, inc);
+  return data;
+};
