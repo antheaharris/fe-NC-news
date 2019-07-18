@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Router } from "@reach/router";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Articles from "./components/Articles/Articles";
 import Article from "./components/Article/Article";
 
