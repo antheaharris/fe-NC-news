@@ -3,11 +3,13 @@ import * as api from "../../api";
 import ArticleCard from "../ArticleCard/ArticleCard";
 import styles from "./Articles.module.css";
 import ErrorPage from "../ErrorPage";
+import Sorter from "../Sorter";
 
 class Articles extends React.Component {
   state = {
     articles: [],
     loading: true,
+    sortBy: "",
     err: null
   };
 
@@ -19,6 +21,7 @@ class Articles extends React.Component {
     }
     return (
       <div>
+        <Sorter changeSortBy={this.changeSortBy} />
         <ul className={styles.articlesList}>
           {articles.map(article => {
             return <ArticleCard {...article} key={article.article_id} />;
@@ -35,16 +38,23 @@ class Articles extends React.Component {
         this.setState({ articles, loading: false });
       })
       .catch(err => {
-        this.setState({ err });
+        this.setState({ err, loading: false });
       });
   };
 
   componentDidUpdate = (prevProps, prevState) => {
-    if (prevProps.topic !== this.props.topic) {
-      api.getArticles(this.props.topic).then(articles => {
+    if (
+      prevProps.topic !== this.props.topic ||
+      prevState.sortBy !== this.state.sortBy
+    ) {
+      api.getArticles(this.props.topic, this.state.sortBy).then(articles => {
         this.setState({ articles, loading: false });
       });
     }
+  };
+
+  changeSortBy = event => {
+    this.setState({ sortBy: event.target.value });
   };
 }
 
