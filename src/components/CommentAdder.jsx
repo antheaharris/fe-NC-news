@@ -1,13 +1,17 @@
 import React from "react";
 import * as api from "../api";
+import ErrorPage from "../components/ErrorPage";
 
 class CommentAdder extends React.Component {
   state = {
-    body: ""
+    body: "",
+    err: null
   };
 
   render() {
-    const { body } = this.state;
+    const { body, err } = this.state;
+    if (err) return <ErrorPage err={err} />;
+
     return (
       <form onSubmit={this.handleSumbit}>
         <label htmlFor="body">
@@ -35,11 +39,11 @@ class CommentAdder extends React.Component {
     event.preventDefault();
 
     const { body } = this.state;
-    const { article_id, username } = this.props;
+    const { article_id, username, addComment } = this.props;
     api
       .postComment(article_id, { body, username })
       .then(newComment => {
-        this.props.addComment(newComment);
+        addComment(newComment);
       })
       .catch(err => {
         this.setState({ err });
