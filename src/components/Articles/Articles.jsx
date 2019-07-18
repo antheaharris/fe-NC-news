@@ -13,7 +13,6 @@ class Articles extends React.Component {
 
   render() {
     const { articles, loading, err } = this.state;
-    // if (err) return <h1>{err.message}</h1>;
     if (err) return <ErrorPage err={err} />;
     if (loading) {
       return <p>great articles take time...</p>;
@@ -31,7 +30,7 @@ class Articles extends React.Component {
 
   componentDidMount = () => {
     api
-      .getArticles()
+      .getArticles(this.props.topic)
       .then(articles => {
         this.setState({ articles, loading: false });
       })

@@ -1,17 +1,17 @@
 import React from "react";
 import styles from "./CommentCard.module.css";
 import * as api from "../../api";
+import Voter from "../Voter/Voter";
 
 class CommentCard extends React.Component {
   render() {
-    const { comment } = this.props;
+    const { body, author, comment_id, votes } = this.props.comment;
     return (
       <li className={styles.commentCard}>
-        <p>{comment.body}</p>
-        <p>{comment.author}</p>
-        <button onClick={() => this.deleteComment(comment.comment_id)}>
-          Delete
-        </button>
+        <p>{body}</p>
+        <p>{author}</p>
+        <Voter votes={votes} id={comment_id} />
+        <button onClick={() => this.deleteComment(comment_id)}>Delete</button>
       </li>
     );
   }
