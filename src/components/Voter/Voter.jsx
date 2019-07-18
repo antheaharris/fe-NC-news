@@ -11,14 +11,14 @@ class Voter extends React.Component {
     return (
       <div>
         <button
-          onClick={() => this.voteOnComment(1)}
+          onClick={() => this.voteOnComment(this.props.type, 1)}
           disabled={this.state.voteModifier === 1 ? true : false}
         >
           + 1
         </button>
         <p>votes: {this.props.votes + this.state.voteModifier}</p>
         <button
-          onClick={() => this.voteOnComment(-1)}
+          onClick={() => this.voteOnComment(this.props.type, -1)}
           disabled={this.state.voteModifier === 0 ? true : false}
         >
           -1
@@ -27,8 +27,8 @@ class Voter extends React.Component {
     );
   }
 
-  voteOnComment = num => {
-    api.vote(this.props.id, num);
+  voteOnComment = (type, num) => {
+    api.vote(type, this.props.id, num);
     this.setState(state => {
       return { voteModifier: state.voteModifier + num };
     });

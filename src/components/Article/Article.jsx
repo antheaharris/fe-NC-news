@@ -20,7 +20,7 @@ class Article extends React.Component {
       <div className={styles.article}>
         <h2>{title}</h2>
         <p>{body}</p>
-        <Voter votes={votes} id={article_id} />
+        <Voter type={"article"} votes={votes} id={article_id} />
         <ArticleComments
           article_id={this.props.article_id}
           username={this.props.username}
@@ -35,7 +35,7 @@ class Article extends React.Component {
         this.setState({ article, loading: false });
       })
       .catch(err => {
-        this.setState({ err });
+        this.setState({ err, loading: false });
       });
   };
 }

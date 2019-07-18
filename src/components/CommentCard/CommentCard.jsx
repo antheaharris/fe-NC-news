@@ -10,7 +10,7 @@ class CommentCard extends React.Component {
       <li className={styles.commentCard}>
         <p>{body}</p>
         <p>{author}</p>
-        <Voter votes={votes} id={comment_id} />
+        <Voter type={"comment"} votes={votes} id={comment_id} />
         <button onClick={() => this.deleteComment(comment_id)}>Delete</button>
       </li>
     );

@@ -10,7 +10,7 @@ const ArticleCard = ({ article_id, title, topic, votes }) => {
         <h3>{title}</h3>{" "}
       </Link>
       <Link to={`/articles/topics/${topic}`}>{topic}</Link>
-      <Voter votes={votes} id={article_id} />
+      <Voter type={"article"} votes={votes} id={article_id} />
     </li>
   );
 };
