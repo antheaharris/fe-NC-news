@@ -33,7 +33,7 @@ export const deleteCommentById = comment_id => {
   return request.delete(`/comments/${comment_id}`);
 };
 
-export const vote = async (type, id, inc) => {
-  const { data } = await request.patch(`/${type}s/${id}`, inc);
+export const vote = async (type, id, inc_votes) => {
+  const { data } = await request.patch(`/${type}s/${id}`, { inc_votes });
   return data;
 };
