@@ -1,7 +1,7 @@
 import React from "react";
 import * as api from "../../api";
 
-class voter extends React.Component {
+class Voter extends React.Component {
   state = {
     voteModifier: 0,
     err: null
@@ -10,9 +10,19 @@ class voter extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.voteOnComment(1)}>+ 1</button>
+        <button
+          onClick={() => this.voteOnComment(1)}
+          disabled={this.state.voteModifier === 1 ? true : false}
+        >
+          + 1
+        </button>
         <p>votes: {this.props.votes + this.state.voteModifier}</p>
-        <button onClick={() => this.voteOnComment(-1)}>-1</button>
+        <button
+          onClick={() => this.voteOnComment(-1)}
+          disabled={this.state.voteModifier === 0 ? true : false}
+        >
+          -1
+        </button>
       </div>
     );
   }
@@ -25,4 +35,4 @@ class voter extends React.Component {
   };
 }
 
-export default voter;
+export default Voter;
