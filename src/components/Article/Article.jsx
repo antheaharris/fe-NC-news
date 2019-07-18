@@ -2,6 +2,7 @@ import React from "react";
 import * as api from "../../api";
 import ArticleComments from "../ArticleComments/ArticleComments";
 import styles from "./Article.module.css";
+import Voter from "../Voter/Voter";
 
 class Article extends React.Component {
   state = {
@@ -10,7 +11,7 @@ class Article extends React.Component {
   };
 
   render() {
-    const { title, body } = this.state.article;
+    const { title, body, votes, article_id } = this.state.article;
     const { loading } = this.state;
     if (loading) {
       return <p>great articles take time...</p>;
@@ -19,6 +20,7 @@ class Article extends React.Component {
       <div className={styles.article}>
         <h2>{title}</h2>
         <p>{body}</p>
+        <Voter votes={votes} id={article_id} />
         <ArticleComments
           article_id={this.props.article_id}
           username={this.props.username}
