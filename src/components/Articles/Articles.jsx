@@ -20,9 +20,9 @@ class Articles extends React.Component {
       return <p>great articles take time...</p>;
     }
     return (
-      <div>
+      <div className={styles.articles_page}>
         <Sorter changeSortBy={this.changeSortBy} />
-        <ul className={styles.articlesList}>
+        <ul className={styles.articles_list}>
           {articles.map(article => {
             return <ArticleCard {...article} key={article.article_id} />;
           })}
