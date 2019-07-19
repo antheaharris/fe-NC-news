@@ -1,0 +1,13 @@
+.home {
+  grid-area: home;
+}
+
+.articles {
+  grid-area: articles;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
