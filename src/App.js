@@ -13,7 +13,7 @@ class App extends React.Component {
   render() {
     const { loggedInUser } = this.state;
     return (
-      <div className="App">
+      <div className="container">
         <Header />
         <Router>
           <Articles path="/articles" />
