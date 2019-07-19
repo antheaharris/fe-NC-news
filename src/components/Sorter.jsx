@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./Articles/Articles.module.css";
 
 const Sorter = ({ changeSortBy }) => {
   return (
-    <label>
+    <label className={styles.filter}>
       {" "}
       Filter by:
       <select onChange={changeSortBy}>
