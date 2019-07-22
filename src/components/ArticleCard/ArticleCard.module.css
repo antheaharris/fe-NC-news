@@ -5,4 +5,12 @@
   padding-top: 10px;
   padding-bottom: 10px;
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.flex_vote {
 }
