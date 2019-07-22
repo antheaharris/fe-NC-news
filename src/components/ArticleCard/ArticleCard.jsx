@@ -24,12 +24,7 @@ const ArticleCard = ({
       </p>
       <Link to={`/articles/topics/${topic}`}>{topic}</Link>
       <p>Comments {comment_count}</p>
-      <Voter
-        type={"article"}
-        votes={votes}
-        id={article_id}
-        className={styles.flex_vote}
-      />
+      <p>Votes {votes}</p>
     </li>
   );
 };
