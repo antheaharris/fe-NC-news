@@ -44,6 +44,7 @@ class CommentAdder extends React.Component {
       .postComment(article_id, { body, username })
       .then(newComment => {
         addComment(newComment);
+        this.setState({ body: "" });
       })
       .catch(err => {
         this.setState({ err });
