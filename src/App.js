@@ -14,7 +14,7 @@ class App extends React.Component {
     const { loggedInUser } = this.state;
     return (
       <div className="container">
-        <Header />
+        <Header loggedInUser={loggedInUser} />
         <Router>
           <Articles path="/articles" />
           <Articles path="/articles/topics/:topic" />
