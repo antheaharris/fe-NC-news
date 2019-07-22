@@ -7,7 +7,7 @@ const Header = ({ loggedInUser }) => {
     <header className={styles.container}>
       <h1 className={styles.item_a}>NC Newsbeat</h1>
       <Navbar className={styles.item_b} />
-      <h5>logged in as {loggedInUser}</h5>
+      <h5 className={styles.item_c}>logged in as {loggedInUser}</h5>
     </header>
   );
 };
