@@ -20,8 +20,8 @@ class App extends React.Component {
           <Articles path="/" />
           <Articles path="/articles/topics/:topic" />
           <Article path="/articles/:article_id" username={loggedInUser} />
+          <ErrorPage default />
         </Router>
-        <ErrorPage default />
       </div>
     );
   }

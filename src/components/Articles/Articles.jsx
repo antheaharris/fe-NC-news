@@ -15,10 +15,10 @@ class Articles extends React.Component {
 
   render() {
     const { articles, loading, err } = this.state;
-    if (err) return <ErrorPage err={err} />;
     if (loading) {
       return <p>great articles take time...</p>;
     }
+    if (err) return <ErrorPage err={err} />;
     return (
       <div className={styles.articles_page}>
         <Sorter changeSortBy={this.changeSortBy} />
