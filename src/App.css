@@ -13,4 +13,6 @@
   grid-template-areas:
     "header"
     "articles";
+  justify-items: center;
+  align-content: space-between;
 }
