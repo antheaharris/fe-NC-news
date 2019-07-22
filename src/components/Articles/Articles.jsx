@@ -9,7 +9,7 @@ class Articles extends React.Component {
   state = {
     articles: [],
     loading: true,
-    sortBy: "",
+    sortBy: "created_at",
     err: null
   };
 
