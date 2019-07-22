@@ -7,6 +7,7 @@ const distanceInWords = require("date-fns/distance_in_words_to_now");
 class CommentCard extends React.Component {
   render() {
     const { body, author, comment_id, votes, created_at } = this.props.comment;
+    const { username } = this.props;
     let formattedDate = distanceInWords(new Date(created_at));
     return (
       <li className={styles.commentCard}>
@@ -15,7 +16,9 @@ class CommentCard extends React.Component {
           posted by {author} {formattedDate} ago
         </p>
         <Voter type={"comment"} votes={votes} id={comment_id} />
-        <button onClick={() => this.deleteComment(comment_id)}>Delete</button>
+        {username === author ? (
+          <button onClick={() => this.deleteComment(comment_id)}>Delete</button>
+        ) : null}
       </li>
     );
   }

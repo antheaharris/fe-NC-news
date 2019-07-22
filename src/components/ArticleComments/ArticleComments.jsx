@@ -13,15 +13,16 @@ class ArticleComments extends React.Component {
 
   render() {
     const { comments, err } = this.state;
+    const { username, article_id } = this.props;
     if (err) return <ErrorPage err={err} />;
 
     return (
       <div className={styles.commentsList}>
-        <h3>What is news without comments...</h3>
+        <h3>Comments...</h3>
         <CommentAdder
-          article_id={this.props.article_id}
+          article_id={article_id}
           addComment={this.addComment}
-          username={this.props.username}
+          username={username}
         />
         <ul>
           {comments.map(comment => {
@@ -30,6 +31,7 @@ class ArticleComments extends React.Component {
                 comment={comment}
                 key={comment.comment_id}
                 removeComment={this.removeComment}
+                username={username}
               />
             );
           })}
