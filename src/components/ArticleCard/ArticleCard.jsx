@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
 import styles from "./ArticleCard.module.css";
-import Voter from "../Voter/Voter";
 const distanceInWords = require("date-fns/distance_in_words_to_now");
 
 const ArticleCard = ({
