@@ -4,7 +4,6 @@ import styles from "./Articles/Articles.module.css";
 const Sorter = ({ changeSortBy }) => {
   return (
     <label className={styles.filter}>
-      {" "}
       Filter by:
       <select onChange={changeSortBy}>
         <option value="created_at">Date</option>
