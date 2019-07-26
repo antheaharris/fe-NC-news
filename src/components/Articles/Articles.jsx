@@ -20,13 +20,18 @@ class Articles extends React.Component {
     }
     if (err) return <ErrorPage err={err} />;
     return (
-      <div className={styles.articles_page}>
-        <Sorter changeSortBy={this.changeSortBy} />
-        <ul className={styles.articles_list}>
-          {articles.map(article => {
-            return <ArticleCard {...article} key={article.article_id} />;
-          })}
-        </ul>
+      <div className={styles.articles_container}>
+        <section className={styles.sorter}>
+          <Sorter changeSortBy={this.changeSortBy} />
+        </section>
+
+        <section className={styles.articles_list}>
+          <ul>
+            {articles.map(article => {
+              return <ArticleCard {...article} key={article.article_id} />;
+            })}
+          </ul>
+        </section>
       </div>
     );
   }
