@@ -4,10 +4,18 @@ import styles from "./Header.module.css";
 
 const Header = ({ loggedInUser }) => {
   return (
-    <header className={styles.container}>
-      <h1 className={styles.item_a}>NC Newsbeat</h1>
-      <Navbar className={styles.item_b} />
-      <h5 className={styles.item_c}>logged in as {loggedInUser}</h5>
+    <header className={styles.flex_container}>
+      <section className={styles.flex_title}>
+        <h1>NC Newsbeat</h1>
+      </section>
+
+      <section className={styles.flex_navbar}>
+        <Navbar />
+      </section>
+
+      <section className={styles.flex_user}>
+        <h5>logged in as {loggedInUser}</h5>
+      </section>
     </header>
   );
 };
