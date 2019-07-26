@@ -14,17 +14,27 @@ const ArticleCard = ({
 }) => {
   let formattedDate = distanceInWords(new Date(created_at));
   return (
-    <li className={styles.articleCard}>
-      <Link to={`/articles/${article_id}`}>
-        <h3>{title}</h3>
-      </Link>
-      <p>
-        written by {author} {formattedDate} ago
-      </p>
-      <Link to={`/articles/topics/${topic}`}>{topic}</Link>
-      <p>Comments {comment_count}</p>
-      <p>Votes {votes}</p>
-    </li>
+    <div className={styles.article_card}>
+      <li>
+        <section className={styles.article_title}>
+          <Link to={`/articles/${article_id}`}>
+            <h3>{title}</h3>
+          </Link>
+        </section>
+
+        <section className={styles.article_details}>
+          <p>
+            written by {author} {formattedDate} ago under{" "}
+            <Link to={`/articles/topics/${topic}`}>{topic}</Link>
+          </p>
+        </section>
+
+        <section className={styles.comments_and_votes}>
+          <p>Comments {comment_count}</p>
+          <p>Votes {votes}</p>
+        </section>
+      </li>
+    </div>
   );
 };
 

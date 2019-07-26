@@ -1,16 +1,27 @@
-.articleCard {
-  margin-bottom: 1em;
+.article_card {
+  display: flex;
+  flex-direction: column;
   border: 3px solid coral;
   border-radius: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  list-style-type: none;
-  display: flex;
+  margin-bottom: 1em;
   flex-wrap: wrap;
-  align-content: flex-start;
-  align-items: baseline;
-  justify-content: space-around;
+  list-style: none;
+  min-width: 100%;
 }
 
-.flex_vote {
+.article_title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.article_details {
+  display: flex;
+  justify-content: center;
+}
+
+.comments_and_votes {
+  display: flex;
+  justify-content: space-around;
 }
