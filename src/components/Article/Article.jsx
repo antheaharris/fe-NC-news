@@ -21,15 +21,21 @@ class Article extends React.Component {
       return <p>great articles take time...</p>;
     }
     return (
-      <div className={styles.article}>
-        <h2>{title}</h2>
-        <p>{body}</p>
-        <Voter type={"article"} votes={votes} id={article_id} />
+      <section className={styles.article_page}>
+        <section className={styles.article}>
+          <h2>{title}</h2>
+          <p>{body}</p>
+        </section>
+
+        <section className={styles.article_votes}>
+          <Voter type={"article"} votes={votes} id={article_id} />
+        </section>
+
         <ArticleComments
           article_id={this.props.article_id}
           username={this.props.username}
         />
-      </div>
+      </section>
     );
   }
   componentDidMount = () => {
