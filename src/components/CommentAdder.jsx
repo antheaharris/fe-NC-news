@@ -15,7 +15,7 @@ class CommentAdder extends React.Component {
     return (
       <form onSubmit={this.handleSumbit}>
         <label htmlFor="body">
-          Comment:
+          Post a comment:&nbsp;
           <input
             type="text"
             name="body"
