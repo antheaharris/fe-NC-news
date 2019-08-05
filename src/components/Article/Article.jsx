@@ -25,10 +25,9 @@ class Article extends React.Component {
         <section className={styles.article}>
           <h2>{title}</h2>
           <p>{body}</p>
-        </section>
-
-        <section className={styles.article_votes}>
-          <Voter type={"article"} votes={votes} id={article_id} />
+          <section className={styles.article_votes}>
+            <Voter type={"article"} votes={votes} id={article_id} />
+          </section>
         </section>
 
         <ArticleComments

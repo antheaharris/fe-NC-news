@@ -1,8 +1,10 @@
 .article_page {
   display: flex;
   flex-direction: column;
-  background-color: pink;
-  min-width: 0%;
+  background-color: #dbd2dc;
+  min-width: 100%;
+  align-items: center;
+  padding: 1%;
 }
 
 .article {
@@ -10,6 +12,9 @@
   flex-direction: column;
   padding-left: 3%;
   padding-right: 3%;
+  background-color: #ecd9ef;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #a196a2;
 }
 
 .article_votes {
@@ -19,6 +24,9 @@
   align-content: space-evenly;
   justify-content: center;
   min-width: 100%;
+  margin-bottom: 10px;
+  background-color: #ecd9ef;
+  border-radius: 15px;
 }
 
 .comments_list {
@@ -27,4 +35,5 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  min-width: 100%;
 }
