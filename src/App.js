@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import Articles from "./components/Articles/Articles";
 import Article from "./components/Article/Article";
 import ErrorPage from "./components/ErrorPage";
-import Footer from "./Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 class App extends React.Component {
   state = {
