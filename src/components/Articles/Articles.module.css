@@ -25,4 +25,16 @@ ul {
   justify-content: center;
   padding: 1%;
   background-color: #dbd2dc;
+  padding-right: 4%;
+  font-family: "Imprima", sans-serif;
+}
+
+select {
+  background-color: #ede4ee;
+  font-family: "Imprima", sans-serif;
+  padding-left: 1%;
+}
+
+.filter_text {
+  margin-right: 2px;
 }
