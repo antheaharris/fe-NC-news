@@ -11,6 +11,14 @@
   min-width: 100%;
   background-color: #ecd9ef;
   box-shadow: 5px 5px 10px #a28ea4;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  } */
+}
+
+.article_card:hover {
+  box-shadow: 10px 10px 10px grey;
 }
 
 .article_title {
