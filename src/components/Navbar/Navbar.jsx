@@ -16,11 +16,11 @@ class Navbar extends React.Component {
     return (
       <nav className={styles.flex_container}>
         <section>
-          <Link to="/">articles</Link>
+          <Link to="/">Home</Link>
         </section>
 
         <section className={styles.topics_box}>
-          <span className={styles.topic_slug}>I want to read about</span>
+          <span className={styles.topic_slug}>Read about:</span>
           {topics.map(topic => {
             return (
               <Link to={`/articles/topics/${topic.slug}`}>

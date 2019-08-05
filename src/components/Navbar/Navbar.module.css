@@ -4,6 +4,7 @@
   align-content: center;
   justify-content: space-around;
   min-width: 100%;
+  flex-wrap: wrap;
 }
 
 .topics_box {
@@ -12,5 +13,5 @@
 }
 
 .topic_slug {
-  margin-right: 2px;
+  margin-right: 5px;
 }
