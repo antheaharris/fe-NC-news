@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NC News - Front End
 
-## Available Scripts
+NC News is a news aggregation based around discussion of articles divided into users, topics, articles, commenting. It is an app created using ReactJS, Reach Router, axios, CSS.......... The aim of the app is to be intuitive, reactive, responsive and provide an enjoyable user experience.
 
-In the project directory, you can run:
+To view the app please follow the instructions below. However a live version can be found hosted on netlify with the link below.
 
-### `npm start`
+HOSTED LINK
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+There is a preset logged-in user jessjelly...
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Installation:
 
-### `npm test`
+/node version
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites:
 
-### `npm run build`
+npm version 6
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Clone this repository
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+1.  git clone LINK
+2.  cd into repository
+    cd northcoders-news
+3.  Install dependencies
+    npm install
+4.  Run the "start" script to start the application running locally
+    npm start
+    To stop running the server use ctrl + c
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Using northcoders-news
 
-### `npm run eject`
+Once running you will be able to filter articles by !!! Time created, comment count votes, in ascending or descending order !!!. You may move around using the navigation bar.......
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You can select a topic from the navigation bar or click on the topic on an article card and you will be taken to a page of all the articles written under that topic.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clicking on an article card will open up the article on it's own page.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Once there, you will be able to vote, post a comment and vote on other users comments and delete a specific users comments as JessJelly the hardcoded logged-in user.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Back-End API
 
-## Learn More
+The repo for the back-end of this NC News project can be found on the below link to github, which is hosted on heroku
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+!!! LINK TO HOSTED SITE !!!
+Built with React.js and Axios
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Built by Anthea Harris
 
-### Code Splitting
+## Acknowledgments
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This app was created as part of a project at the Northcoders Bootcamp. A massive thank you to all the staff and fellow students for a great 12 weeks!
