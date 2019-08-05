@@ -23,7 +23,7 @@ class Navbar extends React.Component {
           <span className={styles.topic_slug}>Read about:</span>
           {topics.map(topic => {
             return (
-              <Link to={`/articles/topics/${topic.slug}`}>
+              <Link to={`/articles/topics/${topic.slug}`} key={topic.slug}>
                 <span className={styles.topic_slug}>{topic.slug}</span>
               </Link>
             );
