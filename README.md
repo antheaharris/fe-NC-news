@@ -54,12 +54,14 @@ npm start
 
 5. To stop running the server use ctrl + c
 
-##Built with
+## Built with
 
 - React.js
 - Axios.js
 
-Built by Anthea Harris
+## Author
+
+Anthea Harris
 
 ## Acknowledgments
 
