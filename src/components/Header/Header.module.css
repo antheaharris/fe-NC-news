@@ -15,12 +15,13 @@
 .flex_navbar {
   display: flex;
   align-content: center;
+  min-width: 100%;
 }
 
 .flex_user {
   display: flex;
-  align-items: flex-end;
   flex-direction: row-reverse;
-  justify-content: flex-end;
-  min-width: 100%;
+  justify-content: flex-start;
+  min-width: 90%;
+  padding-right: 5px;
 }
