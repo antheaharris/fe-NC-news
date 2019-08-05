@@ -1,7 +1,6 @@
 import React from "react";
 import * as api from "../api";
 import ErrorPage from "../components/ErrorPage";
-import styles from "./ArticleComments/ArticleComments.module.css";
 
 class CommentAdder extends React.Component {
   state = {
