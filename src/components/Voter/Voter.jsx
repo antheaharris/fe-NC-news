@@ -33,7 +33,7 @@ class Voter extends React.Component {
             onClick={() => this.voteOnComment(type, 1)}
             disabled={voteModifier === 1 ? true : false}
           >
-            + 1
+            +1
           </button>
         </section>
       </div>
