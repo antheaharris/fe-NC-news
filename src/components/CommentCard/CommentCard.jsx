@@ -18,7 +18,7 @@ class CommentCard extends React.Component {
 
           <section className={styles.comment_details}>
             <p>
-              posted by {author} {formattedDate} ago
+              comment posted by {author} {formattedDate} ago
             </p>
           </section>
           <section className={styles.comment_delete}>
