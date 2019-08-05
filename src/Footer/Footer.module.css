@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300&display=swap");
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #a28ea4;
+  min-width: 100%;
+  align-items: center;
+  padding: 1%;
+  font-family: "Roboto", sans-serif;
+  color: aliceblue;
+  font-size: 13px;
+}

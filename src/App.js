@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Articles from "./components/Articles/Articles";
 import Article from "./components/Article/Article";
 import ErrorPage from "./components/ErrorPage";
+import Footer from "./Footer/Footer";
 
 class App extends React.Component {
   state = {
@@ -22,6 +23,7 @@ class App extends React.Component {
           <Article path="/articles/:article_id" username={loggedInUser} />
           <ErrorPage default />
         </Router>
+        <Footer />
       </div>
     );
   }
