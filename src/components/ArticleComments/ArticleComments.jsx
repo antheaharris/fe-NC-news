@@ -17,13 +17,15 @@ class ArticleComments extends React.Component {
     if (err) return <ErrorPage err={err} />;
 
     return (
-      <div className={styles.commentsList}>
-        <h3>Comments...</h3>
-        <CommentAdder
-          article_id={article_id}
-          addComment={this.addComment}
-          username={username}
-        />
+      <div className={styles.comments_list}>
+        <h3 className={styles.comment_title}>Comments</h3>
+        <section className={styles.comment_adder}>
+          <CommentAdder
+            article_id={article_id}
+            addComment={this.addComment}
+            username={username}
+          />
+        </section>
         <ul>
           {comments.map(comment => {
             return (

@@ -1,6 +1,7 @@
 import React from "react";
 import * as api from "../api";
 import ErrorPage from "../components/ErrorPage";
+import styles from "./ArticleComments/ArticleComments.module.css";
 
 class CommentAdder extends React.Component {
   state = {
@@ -15,7 +16,7 @@ class CommentAdder extends React.Component {
     return (
       <form onSubmit={this.handleSumbit}>
         <label htmlFor="body">
-          Post a comment:&nbsp;
+          Post a comment: &nbsp;
           <input
             type="text"
             name="body"
@@ -25,7 +26,8 @@ class CommentAdder extends React.Component {
             required
           />
         </label>
-        <button>Add</button>
+
+        <button>comment</button>
       </form>
     );
   }
