@@ -1,8 +1,39 @@
 .commentCard {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #e3c4e8;
+  border-radius: 15px;
   margin-bottom: 1em;
-  border: 3px solid purple;
-  border-radius: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  list-style-type: none;
+  flex-wrap: wrap;
+  list-style: none;
+  min-width: 100%;
+  margin-right: 0%;
+  background-color: #ecd9ef;
+  box-shadow: 5px 5px 10px grey;
+}
+
+.comment_body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.comment_details {
+  display: flex;
+  justify-content: space-around;
+  padding: 0%;
+  margin: 0% 0px;
+  font-size: 11px;
+}
+
+.comment_delete {
+  display: flex;
+  justify-content: space-around;
+  padding: 1%;
+}
+
+.comment_vote {
+  display: flex;
+  justify-content: center;
 }
