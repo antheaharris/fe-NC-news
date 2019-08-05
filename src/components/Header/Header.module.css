@@ -1,21 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Neuton:800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300&display=swap");
+
 .flex_container {
   display: flex;
   flex-direction: column;
-  background-color: aquamarine;
+  background-color: #a28ea4;
   min-width: 100%;
   align-items: center;
   padding: 1%;
 }
 
+h1 {
+  margin: 0%;
+}
+
 .flex_title {
   display: flex;
   align-items: center;
+  font-family: "Neuton", serif;
+  font-size: 40px;
+  color: aliceblue;
+  margin: 0%;
 }
 
 .flex_navbar {
   display: flex;
   align-content: center;
   min-width: 100%;
+  font-family: "Roboto", sans-serif;
+
+  font-size: 18px;
+  margin-bottom: 1%;
 }
 
 .flex_user {
@@ -24,4 +39,10 @@
   justify-content: flex-start;
   min-width: 90%;
   padding-right: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+h5 {
+  margin: 0%;
+  margin-bottom: 2%;
 }
