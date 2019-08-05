@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300&display=swap");
+
 .comments_list {
   display: flex;
   flex-direction: column;
@@ -18,6 +20,7 @@
   margin: 0%;
   min-width: 100%;
   font-size: 25px;
+  font-family: "Roboto", sans-serif;
 }
 
 .comment_adder {
@@ -28,6 +31,7 @@
   padding-bottom: 1%;
   padding-right: 2%;
   min-width: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 button {
